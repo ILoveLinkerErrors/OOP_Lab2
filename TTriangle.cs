@@ -1,4 +1,15 @@
 class TTRiangle {
+    // 4. Клас “Трикутник ” – TTriangle
+    // поля:  для зберігання довжин сторін;
+    // методи:
+    //  конструктор без параметрів, конструктор з параметрами, конструктор
+    // копіювання;
+    //  введення/виведення даних;
+    //  визначення площі;
+    //  визначення периметру;
+    //  порівняння з іншим трикутником;
+    //  перевантаження операторів + (додавання довжин сторін), – (віднімання
+    // довжин відповідних сторін), * (множення сторін на деяке число).
     private double sideA;
     private double sideB;
     private double sideC;
@@ -124,12 +135,13 @@ class TTRiangle {
             Console.Error.WriteLine("Fatal Error: sides {0}, {1}, {2} do not form a valid triangle.", a, b, c);
             Environment.Exit(1);
         } 
-        SideA = a;
-        SideB = b;
-        SideB = c;
+        sideA = a;
+        sideB = b;
+        sideC = c;
     }
 
     public void Print() {
+        Console.WriteLine("\nTriangle sides: ");
         Console.WriteLine("Side<A> = {0}", SideA);
         Console.WriteLine("Side<B> = {0}", SideB);
         Console.WriteLine("Side<C> = {0}", SideC);
@@ -140,8 +152,8 @@ class TTRiangle {
     }
 
     public double GetArea() {
-        var halfPerim = 0.5 * GetPerimeter();
-        return Math.Sqrt(halfPerim * (SideA - halfPerim) * (SideB - halfPerim) * (SideC - halfPerim));
+        double halfPerim = 0.5 * GetPerimeter();
+        return Math.Sqrt(halfPerim * (halfPerim - SideA) * (halfPerim - SideB) * (halfPerim - SideC));
     }
     
     public static TTRiangle operator +(TTRiangle t1, TTRiangle t2) {
