@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "utQtbWurauZOOZviCYzFHkaRS6XFApnGIuhT+pbLAtD16KGDlanvp5GY4O9DG2lBZSrBBCmAzFxwwHRcv6KFCA==",
+  "success": true,
+  "projectFilePath": "/home/user/code/csharp/OOP_Labs/lab2/lab2.csproj",
+  "expectedPackageFiles": [
+    "/home/user/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.13/microsoft.aspnetcore.app.ref.7.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
