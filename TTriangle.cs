@@ -103,6 +103,13 @@ class TTRiangle {
         isInitialized = true;
     }
 
+    public TTRiangle(TTRiangle copy) {
+        SideA = copy.sideA;
+        SideB = copy.sideB;
+        SideC = copy.SideC;
+        isInitialized = true;
+    }
+
     public void Input() {
         static double getSide(string sideName)
         {
